@@ -301,6 +301,12 @@ Example:
 .thing-heading-button { }
 ```
 
+### What is Specificity?
+
+Specificity is a weight that is applied to a given CSS declaration, determined by the number of each selector type in the matching selector. When specificity is equal to any of the multiple declarations, the last declaration found in the CSS is applied to the element. Specificity only applies when the same element is targeted by multiple declarations. As per CSS rules directly targeted element will always take precedence over rules that an element inherits from an ancestor.
+
+[Read More on Specificity] (https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
+
 ### Element States
 
 The dynamic nature and interactivity of the web means things are constantly changing states. Active, inactive; open, closed; expanded, collapsed.

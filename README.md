@@ -45,7 +45,7 @@ Bad:
 ## Ordering
 
 * Keep all element rules before nested children to keep properties close to their selector
-* Group like-properties when possible (e.g. margin and padding, position and top/left/bottom/right, font-weight/size/style) for readability and easier future editing
+* Group like-properties when possible (e.g. margin and padding, position and top/left/bottom/right, font-weight/size/style) for readability and easier future editinge
 
 Good:
 ```sass
@@ -134,7 +134,7 @@ Good:
 .thing {
 	color: blue;
 	font-weight: bold;
-	z-index: 743; // Tuck between main slider at 740, and overlay at 745
+	z-index: 743; // Tuck between sticky header at 740, and overlay at 745
 }
 ```
 
@@ -145,7 +145,6 @@ Organize single files into logical sections, and separate them with a block comm
 * 80-character width
 * All-caps for text
 * Text lines up with 4-space tab
-* Exclamation point creates a "bookmark" in Coda
 
 ```sass
 // -----------------------------------------------------------------------------
@@ -227,6 +226,56 @@ All partials are stuffed into 7 different folders. A single file at the root lev
 * themes/
 * abstracts/
 * vendors/
+
+Example:
+
+```sass
+sass/
+|
+|– abstracts/
+|   |– _variables.scss    # Sass Variables
+|   |– _functions.scss    # Sass Functions
+|   |– _mixins.scss       # Sass Mixins
+|   |– _placeholders.scss # Sass Placeholders
+|
+|– base/
+|   |– _reset.scss        # Reset/normalize
+|   |– _typography.scss   # Typography rules
+|   …                     # Etc.
+|
+|– components/
+|   |– _buttons.scss      # Buttons
+|   |– _carousel.scss     # Carousel
+|   |– _cover.scss        # Cover
+|   |– _dropdown.scss     # Dropdown
+|   …                     # Etc.
+|
+|– layout/
+|   |– _navigation.scss   # Navigation
+|   |– _grid.scss         # Grid system
+|   |– _header.scss       # Header
+|   |– _footer.scss       # Footer
+|   |– _sidebar.scss      # Sidebar
+|   |– _forms.scss        # Forms
+|   …                     # Etc.
+|
+|– pages/
+|   |– _home.scss         # Home specific styles
+|   |– _contact.scss      # Contact specific styles
+|   …                     # Etc.
+|
+|– themes/
+|   |– _theme.scss        # Default theme
+|   |– _admin.scss        # Admin theme
+|   …                     # Etc.
+|
+|– vendors/
+|   |– _bootstrap.scss    # Bootstrap
+|   |– _jquery-ui.scss    # jQuery UI
+|   …                     # Etc.
+|
+`– main.scss              # Main Sass file
+```
 
 [7-1 Pattern: Further Reading] (http://sass-guidelin.es/#the-7-1-pattern)
 

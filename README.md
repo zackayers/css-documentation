@@ -2,7 +2,7 @@
 
 # **CSS**
 
-**[Philosophy](#markdown-header-philosophy)** | **[Syntax](#markdown-header-syntax)** | **[File Structure](#markdown-header-file-structure)** | **[Standards](#markdown-header-standards)**
+**[Philosophy](#header-philosophy)** | **[Syntax](#header-syntax)** | **[File Structure](#file-structure)** | **[Standards](#header-standards)**
 
 --------------------------------------------------------------------------------
 
@@ -214,27 +214,28 @@ Bad:
 
 To keep things tidy, break out like-styles into partial files and `@import` them into a main file. Think of the main file as purely a table of contents.
 
+## 7-1 Pattern
+
+All partials are stuffed into 7 different folders. A single file at the root level (usually named main.scss, sometimes named style.scss or all.scss) which imports them all to be compiled into a CSS stylesheet.
+
+* base/
+* components/
+* layout/
+* pages/
+* themes/
+* abstracts/
+* vendors/
+
+* [7-1 Pattern: Further Reading] (http://sass-guidelin.es/#the-7-1-pattern)
 
 ## Multiple Processed Stylesheets
 
-When dealing with multiple pre-processed stylesheets (e.g. WordPress theme, WordPress admin color scheme, and WordPress TinyMCE editor), store variables and shared core styles in their own partials and `@import` them into each base file versus redeclaring them in each file.
+When dealing with multiple pre-processed stylesheets (e.g. a separate styleguide, store variables and shared core styles in their own partials and `@import` them into each base file versus redeclaring them in each file.
 
 
 --------------------------------------------------------------------------------
 
 # Standards
-
-## SCSS for Preprocessing
-
-
-Use SCSS for CSS preprocessing, unless an existing environment is already using LESS.
-
-A few articles outlining the reasoning:
-
-* [SASS vs. LESS](https://css-tricks.com/sass-vs-less/) _CSS Tricks_
-* [Less vs Sass? It's time to switch to Sass](http://www.zingdesign.com/less-vs-sass-its-time-to-switch-to-sass/) _Zing Design_
-* [SASS vs LESS](http://www.hongkiat.com/blog/sass-vs-less/) _Hongkiat_
-
 
 ## Name Things for Reuse
 

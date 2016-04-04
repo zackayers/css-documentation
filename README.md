@@ -10,7 +10,7 @@
 
 * **Embrace the Cascade** – Don't fight the natural cascading of styles to child elements; contextualize what needs contextualizing, but build upon inheritance.
 * **Be Only As Specific as Necessary** – Limit specificity to only what's required, and nothing more.
-* **Always Style the Basic Elements** – Determine what the core styles are, and make sure those elements are styled without context-specificty. Especially important for sites with a WYSIWYG admin component.
+* **Always Style the Basic Elements** – Determine what the core styles are, and make sure those elements are styled without context-specificty.
 * **Limit to 4 Levels of Nesting** – Anything more than 4 levels is likely more specific than necessary.
 * **Utilize Preprocessors** – Variables, mixins, color functions, nesting, and partials make CSS much more maintainable.
 
@@ -215,6 +215,8 @@ Bad:
 To keep things tidy, break out like-styles into partial files and `@import` them into a main file. Think of the main file as purely a table of contents.
 
 ## 7-1 Pattern
+
+> One file to rule them all, one file to find them, one fill to bring them all, and in the Sass way merge them. - J.R.R. Tolkein
 
 All partials are stuffed into 7 different folders. A single file at the root level (usually named main.scss, sometimes named style.scss or all.scss) which imports them all to be compiled into a CSS stylesheet.
 

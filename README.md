@@ -226,7 +226,7 @@ All partials are stuffed into 7 different folders. A single file at the root lev
 * abstracts/
 * vendors/
 
-* [7-1 Pattern: Further Reading] (http://sass-guidelin.es/#the-7-1-pattern)
+[7-1 Pattern: Further Reading] (http://sass-guidelin.es/#the-7-1-pattern)
 
 ## Multiple Processed Stylesheets
 

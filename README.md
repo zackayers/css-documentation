@@ -2,7 +2,7 @@
 
 # **CSS**
 
-**[Philosophy](#header-philosophy)** | **[Syntax](#header-syntax)** | **[File Structure](#file-structure)** | **[Standards](#header-standards)**
+**[Philosophy](#header-philosophy)** | **[Syntax](#header-syntax)** | **[File Structure](#file-structure)** | **[Standards](#header-standards)** | **[Resources](#header-resources)**
 
 --------------------------------------------------------------------------------
 
@@ -493,3 +493,12 @@ Bad:
 	}
 }
 ```
+
+--------------------------------------------------------------------------------
+
+# Resources
+
+* [CSS Tricks] (https://css-tricks.com)
+* [Sass Guidelines] (http://sass-guidelin.es/)
+* [Can I Use] (http://caniuse.com/)
+* [SitePoint] (http://www.sitepoint.com/html-css/)

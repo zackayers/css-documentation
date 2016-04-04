@@ -338,7 +338,6 @@ html {
 
 At its core, the CSS should be styling the _content_. The awesome things you do with the markup to turn the content into a _website_ should be the exceptions to the rule, not the rule itself.
 
-This is even more important when building for WYSIWYG editors. Make sure all of the buttons clients can click in the editor do something meaningful to the styling.
 
 Bad:
 ```sass

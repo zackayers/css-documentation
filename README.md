@@ -2,7 +2,7 @@
 
 # **CSS**
 
-**[Philosophy](#header-philosophy)** | **[Syntax](#header-syntax)** | **[File Structure](#file-structure)** | **[Standards](#header-standards)** | **[Resources](#header-resources)**
+**[Philosophy](#philosophy)** | **[Syntax](#syntax)** | **[File Structure](#file-structure)** | **[Standards](#standards)** | **[Resources](#resources)**
 
 --------------------------------------------------------------------------------
 

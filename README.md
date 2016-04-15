@@ -18,9 +18,20 @@
 
 # Syntax
 
-## New Lines
+## Single Declarations
 
-Use new lines to keep code readable, and make finding selectors and copying and pasting properties easier.
+In instances where a rule set includes *only one declaration*, consider removing line breaks for readability and faster editing. Any rule set with multiple declarations should be split to separate lines.
+
+```css
+/* Single declarations on one line */
+.span1 { width: 60px; }
+.span2 { width: 140px; }
+.span3 { width: 220px; }
+```
+
+## Multiple Declarations
+
+With multiple declarations, separate lines is a must for your sanity.
 
 * Every rule on its own line
 * Multiple selectors on their own lines
@@ -42,22 +53,53 @@ Bad:
 ```
 
 
-## Ordering
+## Declaration Order
 
 * Keep all element rules before nested children to keep properties close to their selector
-* Group like-properties when possible (e.g. margin and padding, position and top/left/bottom/right, font-weight/size/style) for readability and easier future editinge
+* Related property declarations should be grouped together following the order:
+1. Positioning
+2. Box Model
+3. Typographic
+4. Visual
+
+Positioning comes first because it can remove an element from the normal flow of the document and override box model related styles. The box model comes next as it dictates a component's dimensions and placement.
+
+Everything else takes place _inside_ the component or without impacting the previous two sections, and thus they come last.
 
 Good:
 ```sass
-.thing {
+.declaration-order {
+  /* Positioning */
 	position: absolute;
-	top: 7px;
+	top: 0;
+	right: 0;
 	left: 0;
-	background: red;
-	font-weight: bold;
-	font-style: italic;
-
-	.thing-child {
+	bottom: 0;
+  
+  /* Box-Model */
+  display: block;
+  float: right;
+  width: 5rem;
+  height: 5rem;
+  
+  /* Typography */
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  color: #222;
+  
+  /* Visual */
+  background-color: #f2f2f2;
+  border: 1px solid #e5e5e5;
+  border-radius: .25rem;
+  
+  /* Misc */
+  opacity: .5;
+  
+  
+	.declaration-order-child {
 		/* ... */
 	}
 }
@@ -65,21 +107,41 @@ Good:
 
 Bad:
 ```sass
-.thing {
-	top: 7px;
-	font-weight: bold;
-	background: red;
+.declaration-order {
 
-	.thing-child {
+  /* Visual */
+  background-color: #f2f2f2;
+  border: 1px solid #e5e5e5;
+  border-radius: .25rem;
+
+ 
+  /* Box-Model */
+  display: block;
+  float: right;
+  width: 5rem;
+  height: 5rem;
+
+	.declaration-order-child {
 		/* ... */
 	}
 
-	left: 0;
-	font-style: italic;
+  /* Positioning */
 	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+
+  /* Typography */
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  color: #222;
+
 }
 ```
-
 
 ## Shorthand Properties
 
@@ -116,9 +178,10 @@ Be mindful of optional properties that might be unintentionally reset by shortha
 
 ## Comments
 
-Make sure your future self knows what the heck your current self was thinking when you made that `z-index: 743`. But, future-you knows how to read code too.
+Ensure your code is descriptive, well commented, and approachable by others. Make sure your future self knows what the heck your current self was thinking when you made that `z-index: 743`. But, future-you knows how to read code too.
 
-> The code should tell you how, the comments should tell you why
+> Great code comments convey context or purporse. The code should tell you how, the comments should tell you why.
+
 
 Bad:
 ```sass
@@ -144,7 +207,7 @@ Organize single files into logical sections, and separate them with a block comm
 
 * 80-character width
 * All-caps for text
-* Text lines up with 4-space tab
+* Text lines up with 2-space tab
 
 ```sass
 // -----------------------------------------------------------------------------

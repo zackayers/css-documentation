@@ -57,10 +57,10 @@ Bad:
 
 * Keep all element rules before nested children to keep properties close to their selector
 * Related property declarations should be grouped together following the order:
-1. Positioning
-2. Box Model
-3. Typographic
-4. Visual
+  1. Positioning
+  2. Box Model
+  3. Typographic
+  4. Visual
 
 Positioning comes first because it can remove an element from the normal flow of the document and override box model related styles. The box model comes next as it dictates a component's dimensions and placement.
 

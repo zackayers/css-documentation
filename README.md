@@ -1,6 +1,4 @@
-# css-documentation
-
-# **CSS**
+# **CSS Coding Standards**
 
 **[Philosophy](#philosophy)** | **[Syntax](#syntax)** | **[File Structure](#file-structure)** | **[Standards](#standards)** | **[Resources](#resources)**
 

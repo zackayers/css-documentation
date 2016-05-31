@@ -431,7 +431,7 @@ Example:
 ```
 
 
-## Never Use `!important`
+## Use `!important` With Caution
 
 Think long and hard before using `!important` and be prepared to defend your decision. It can easily wreak havoc on a codebase, and make debugging CSS issues a nightmare. Once there's one `!important`, you'll inevitably have to add more.
 
@@ -534,9 +534,31 @@ Good
 ```
 
 
-## Don't Use IDs
+## Selector Usage
 
-Think _hard_ before using an ID in your selector. It almost always breaks the cascade and forces extraneous specificity on everything inside it.
+In order to avoid redundancy in your stylesheets, it is important to make a proper use of both ids and classes. Ids are for styling an individual element such as a logo:
+
+```css
+#logo{
+	width: 250px;
+	height:90px;
+	display: block;
+	float:left;
+}
+```
+On the other hand, classes are made to define styles that would be applied to various elements:
+
+```css
+.box{
+	margin: 1em 0px 1.5em;
+	padding: 9px 10px 9px 15px;
+	color: #555;
+	font-weight: bold;
+	background: #E4F0FC;
+}
+```
+
+Ultimately, think _hard_ before using an ID in your selector. It almost always breaks the cascade and forces extraneous specificity on everything inside it.
 
 Example:
 ```html
